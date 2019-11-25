@@ -1,4 +1,4 @@
-# kitchen-ec2-example
+# [kitchen-ec2-example](https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html)
 
 > Kitchen-Terraform enables verification of Terraform state.
 
