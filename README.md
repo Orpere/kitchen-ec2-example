@@ -57,6 +57,8 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
 
 ## Setup aws access
 
+- update with your credentials
+  
 ```bash
   export AWS_ACCESS_KEY_ID="xxxxxxxxxxxxx"
   export AWS_SECRET_ACCESS_KEY="xxxxxxxxxxxxx"
