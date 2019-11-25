@@ -60,11 +60,15 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
 
 - update your ssh keys on .kitchen.yaml and your testing.tfvars with your key path
 
+.kitchen.yaml
+
 ```yaml
 transport:
   name: ssh
   ssh_key: "~/.ssh/<your_key.pem>"
 ```
+
+testing.tfvars
 
 ```terraform
 key_name      = "your_key.pem"
