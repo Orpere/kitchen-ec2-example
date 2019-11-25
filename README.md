@@ -55,7 +55,16 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
 
 - Next, [Bundler](https://bundler.io) needs to be installed, run `gem install bundler`, this would provide the dependencies that KitchenCI needs. It is going to install the Gems defined in the `Gemfile`
 
+
 ## Setup KitchenCI:
+
+- update your ssh keys on .kitchen.yaml with your key
+
+```yaml
+transport:
+  name: ssh
+  ssh_key: "/Users/orlando/.ssh/<your_key.pem>"
+```
 
 - Install the needed Gems for KitchenCI using Bundle with command :
   
@@ -109,6 +118,21 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
   
     ```bash
     bundle exec kitchen verify
+    ```
+
+    - it should show similar result to:
+
+    ```bash
+        ➜  tf_aws_cluster git:(master) bundle exec kitchen verify
+    -----> Starting Kitchen (v1.25.0)
+    -----> Setting up <default-ubuntu>...
+           Finished setting up <default-ubuntu> (0m0.00s).
+    -----> Verifying <default-ubuntu>...
+    $$$$$$ Running command `terraform workspace select kitchen-terraform-default-ubuntu` in directory /Users/orlando/GITHUB/terraform/kitchen-tutorial/ tf_aws_cluster
+    $$$$$$ Running command `terraform output -json` in directory /Users/orlando/GITHUB/terraform/kitchen-tutorial/tf_aws_cluster
+           Finished verifying <default-ubuntu> (0m0.11s).
+    -----> Kitchen is finished. (0m1.74s)
+    ➜  tf_aws_cluster git:(master) 
     ```
 
 - Now destroy your test instances
