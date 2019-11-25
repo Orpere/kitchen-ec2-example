@@ -12,7 +12,7 @@ platforms:
 
 transport:
   name: ssh
-  ssh_key: "/Users/orlando/.ssh/orlando2.pem"
+  ssh_key: ""~/.ssh/<your_key.pem>""
 
 verifier:
   name: terraform

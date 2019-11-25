@@ -58,12 +58,16 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
 
 ## Setup KitchenCI:
 
-- update your ssh keys on .kitchen.yaml with your key
+- update your ssh keys on .kitchen.yaml and your testing.tfvars with your key path
 
 ```yaml
 transport:
   name: ssh
-  ssh_key: "/Users/orlando/.ssh/<your_key.pem>"
+  ssh_key: "~/.ssh/<your_key.pem>"
+```
+
+```terraform
+key_name      = "your_key.pem"
 ```
 
 - Install the needed Gems for KitchenCI using Bundle with command :
