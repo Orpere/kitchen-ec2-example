@@ -1,0 +1,5 @@
+.kitchen
+testing.tfvars
+terraform.*
+Gemfile.lock
+.terraform

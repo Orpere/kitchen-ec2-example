@@ -1,5 +1,7 @@
 # [kitchen-ec2-example](https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html)
 
+This project is to show the kitchen-ci Terraform Amazon Provider base on the [tutorial](https://newcontext-oss.github.io/kitchen-terraform/tutorials/amazon_provider_ec2.html)
+
 ## Clone this project
 
 - In a directory of your choice, clone the github repository :
