@@ -55,10 +55,16 @@ This project is to show the kitchen-ci Terraform Amazon Provider base on the [tu
 
 - Next, [Bundler](https://bundler.io) needs to be installed, run `gem install bundler`, this would provide the dependencies that KitchenCI needs. It is going to install the Gems defined in the `Gemfile`
 
+## Setup aws access
+
+```bash
+  export AWS_ACCESS_KEY_ID="xxxxxxxxxxxxx"
+  export AWS_SECRET_ACCESS_KEY="xxxxxxxxxxxxx"
+```
 
 ## Setup KitchenCI:
 
-- update your ssh keys on .kitchen.yaml and your testing.tfvars with your key path
+- update your ssh keys on .kitchen.yaml and your values in testing.tfvars with your key path
 
 .kitchen.yaml
 
@@ -68,10 +74,15 @@ transport:
   ssh_key: "~/.ssh/<your_key.pem>"
 ```
 
-testing.tfvars
+testing.tfvars note: please leave access_key and secret_key as it is.
 
 ```terraform
+access_key    = ""
+secret_key    = ""
 key_name      = "your_key.pem"
+region        = "us-east-1"
+ami           = "ami-fce3c696"
+instance_type = "m3.medium"
 ```
 
 - Install the needed Gems for KitchenCI using Bundle with command :
